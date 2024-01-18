@@ -22,7 +22,7 @@ Usage:
      3. Specify the number of uppercase letters, lowercase letters, special characters, and digits.
      4. The program will generate and display the customized password.
 
-3. Rock, Paper, Scissors Game :
+# 3. Rock, Paper, Scissors Game :
 Overview:
 This Python program implements a text-based Rock, Paper, Scissors game. Users can play against the computer, making choices between rock, paper, and scissors. The program determines the winner based on the game rules and displays the results.
 
@@ -33,7 +33,7 @@ Usage:
      4. The program will determine the winner and display the results.
      5. Optionally, play again or exit the game.
 
-4.Contact Book :
+# 4.Contact Book :
 Overview:
 This Python program serves as a basic Contact Management System. Users can add, view, search, update, and delete contacts. Contacts are represented with attributes such as name, phone number, email, and address.
 
