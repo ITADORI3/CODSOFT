@@ -6,10 +6,10 @@ Overview:
 This Python program implements a basic calculator, providing users with the ability to perform simple arithmetic operations. It serves as a helpful tool for performing calculations on two numbers with ease.
 
 Usage:
-     1) Run the program.
-     2) Choose the desired operation by entering the corresponding number (1 to 4). 
-     3) Enter two numbers when prompted.
-     4) The program will display the result of the selected operation.
+     1. Run the program.
+     2. Choose the desired operation by entering the corresponding number (1 to 4). 
+     3. Enter two numbers when prompted.
+     4. The program will display the result of the selected operation.
 
 
 # 2. Password Generator Program :
