@@ -1,7 +1,7 @@
 # CODSOFT
 This repository is for all the the tasks/assignments done for the internship in codsoft. It consist of python programming language.
 
-1. Calculator Program :
+# 1. Calculator Program :
 Overview:
 This Python program implements a basic calculator, providing users with the ability to perform simple arithmetic operations. It serves as a helpful tool for performing calculations on two numbers with ease.
 
@@ -12,7 +12,7 @@ Usage:
      4. The program will display the result of the selected operation.
 
 
-2. Password Generator Program :
+# 2. Password Generator Program :
 Overview:
 This Python program generates secure and customized passwords based on user preferences. Users can specify the length of the password and the number of uppercase letters, lowercase letters, special characters, and digits.
 
