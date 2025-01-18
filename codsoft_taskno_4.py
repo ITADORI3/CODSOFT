@@ -1,67 +1,60 @@
 import random
-from enum import Enum
+from selectors import SelectSelector
 
-class Choice(Enum):
-    ROCK = "rock"
-    PAPER = "paper"
-    SCISSORS = "scissors"
+rock = '''
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+'''
 
-def get_user_choice():
-    user_input = input("Enter your choice (rock, paper, scissors): ").lower()
-    while user_input not in [choice.value for choice in Choice]:
-        print("Invalid input. Please try again.")
-        user_input = input("Enter your choice (rock, paper, scissors): ").lower()
-    return user_input
+paper = '''
+    _______
+---'   ____)____
+          ______)
+          _______)
+         _______)
+---.__________)
+'''
 
-def get_computer_choice():
-    return random.choice([choice.value for choice in Choice])
+scissors = '''
+    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+'''
+game_images=[rock,paper,scissors]
 
-def determine_winner(user, computer):
-    if user == computer:
-        return "tie"
-    elif (user == Choice.ROCK.value and computer == Choice.SCISSORS.value) or \
-         (user == Choice.SCISSORS.value and computer == Choice.PAPER.value) or \
-         (user == Choice.PAPER.value and computer == Choice.ROCK.value):
-        return "user"
-    else:
-        return "computer"
+user_choice=int(input("Enter your choice : 0 for rock, 1 for paper and 2 for scissor \n"))
+if user_choice >=0 and user_choice <=2:
+    print(game_images[user_choice])
+# 0=rock 1=paper 2=scissors
 
-def display_results(user, computer, winner):
-    print(f"\nYour choice: {user}")
-    print(f"Computer's choice: {computer}")
+computer_choice= random.randint(0,2)
+print("Computer chose : ")
+print(game_images[computer_choice])
 
-    if winner == "tie":
-        print("It's a tie!")
-    elif winner == "user":
-        print("You win!")
-    else:
-        print("You lose!")
+if user_choice >=3  :
+    print("You typed an invalid number")
 
-def main():
-    user_score = 0
-    computer_score = 0
-    total_rounds = 0
+elif user_choice >  computer_choice :
+    print("You Win !!")
 
-    while True:
-        user_choice = get_user_choice()
-        computer_choice = get_computer_choice()
-        winner = determine_winner(user_choice, computer_choice)
+elif user_choice ==2 and  computer_choice==1 :
+    print("You Win !!")
 
-        display_results(user_choice, computer_choice, winner)
+elif user_choice ==0 and  computer_choice==2 :
+    print("You Win !!")
 
-        if winner == "user":
-            user_score += 1
-        elif winner == "computer":
-            computer_score += 1
+elif user_choice ==2 and  computer_choice==0:
+    print("You Lost")
 
-        total_rounds += 1
-        print(f"\nYour score: {user_score}\nComputer score: {computer_score}")
+elif user_choice == computer_choice:
+    print("Its a Tie")
 
-        play_again = input("Do you want to play again? (yes/no): ").lower().strip()
-        if play_again != "yes":
-            break
-
-    print(f"\nGame Over! Total rounds played: {total_rounds}")
-
-if __name__ == "__main__":
-    main()
+elif  user_choice < computer_choice :
+    print("You Lost")
